@@ -1,0 +1,87 @@
+.animated
+  animation-duration: $animation-duration
+  animation-fill-mode: both
+
+@keyframes slideInUp
+  from
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+
+  to
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+.slideInUp
+  animation-name: slideInUp
+
+@keyframes fadeInLeft
+  from
+    opacity: 0
+    transform: translate3d(-100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+
+
+.fadeInLeft
+  animation-name: fadeInLeft
+
+@keyframes fadeInRight
+  from
+    opacity: 0
+    transform: translate3d(100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: none
+    transform: none
+
+
+.fadeInRight
+  animation-name: fadeInRight
+
+@keyframes pulse
+  from
+    top: 0
+
+  50%
+    top: 3px
+
+  to
+    left: 0
+
+
+@keyframes progress
+  from
+    width: 10%
+
+  to
+    width: 86%
+
+
+@keyframes progress2
+  from
+    width: 10%
+
+  to
+    width: 70%
+
+
+@keyframes progress3
+  from
+    width: 10%
+
+  to
+    width: 65%
+
+.progressRight
+  animation-name: progress
+
+.progressRight2
+  animation-name: progress2
+
+.progressRight3
+  animation-name: progress3

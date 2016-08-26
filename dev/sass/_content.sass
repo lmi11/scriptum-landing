@@ -1,0 +1,557 @@
+.about-us
+  &__left-side
+    float: left
+    width: 53.4%
+    margin-right: 4%
+
+  &__right-side
+    float: right
+    width: 41.6%
+  
+  &__title
+    margin-top: 37.35px
+    text-align: left
+
+  &__image
+    display: block
+    +size(100% 452px)
+    +bgc($content-elements-bg)
+
+  &__description
+    font-size: 15px
+    line-height: 23px
+    letter-spacing: 2px
+    color: $gray-two
+
+  &__more-link
+    display: block
+    float: left
+    margin-top: 42px
+    font-family: BaronNeue
+    font-size: 13px
+    text-transform: lowercase
+    color: $black-two
+    transition: width .3s ease-in-out
+
+    &:after
+      content: ""
+      display: block
+      width: 0%
+      margin: 5px auto 0
+      text-align: center
+      border-bottom: 2px solid $content-elements-bg
+      transition: width .6s ease-in-out
+
+    &:hover
+      &:after
+        width: 70%
+
+//Tabs
+
+.tabs
+  text-align: center
+
+  &__tab
+    display: inline-block
+    color: $black-two
+    font: 12px $second-font
+    letter-spacing: 2px
+    cursor: pointer
+    transition: width .1s ease-in-out
+
+    &:not(:last-of-type)
+      margin-right: 29px
+    
+    &:after
+      content: ""
+      display: block
+      width: 0%
+      margin: 5px auto 0
+      text-align: center
+      border-bottom: 2px solid $black-two
+      transition: width .3s ease-in-out
+
+    &:hover
+      &:after
+        width: 100%
+
+    &--active
+      color: $black
+      &:after
+        width: 100%
+
+.tab-content
+  padding-top: 48px
+
+.grid-container
+  columns: 3
+
+.portfolio-work-link
+  display: block
+  width: 407px
+
+.portfolio-work-image
+  width: inherit
+  margin-bottom: 20px
+  +bgc(#f4f4f4)
+  transition: opacity .6s ease-in-out
+
+  &:hover
+    opacity: .8
+
+.web-development
+  padding: 0
+  
+  &__mobile-title
+    display: none
+    margin-bottom: 40px
+    padding-top: 37px
+    font-size: 34px
+
+  &__left-block
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    float: left
+    width: 50%
+    padding: 18.7% 4.7%
+    +bgc($content-elements-bg)
+    background: $content-elements-bg url('../img/development-image.png') no-repeat 0% 0% / cover
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      +size(100%)
+      background-color: rgba(#203345, 0.63)
+
+  &__title
+    position: relative
+    z-index: 2
+    display: flex
+    justify-content: center
+    +size(100%)
+    margin: 0
+    padding: 10px 20px 25px
+    font-size: 65px
+    letter-spacing: 1px
+    color: $white
+    +br-solid(3px,$white)
+    cursor: default
+
+    &:before
+      content: ''
+      position: absolute
+      +size(100.7% 106%)
+      top: 6px
+      left: 6px
+      +br-solid(3px,$white)
+      transition: all $animation-duration ease-in-out
+
+    &:hover,
+      &:before
+        top: 6px
+        left: 6px
+
+    &.animated
+      &:before
+        transition: all $animation-duration ease-in-out
+        top: -12px
+        left: -12px
+
+  &__right-block
+    float: right
+    width: 50%
+    padding: 8% 7.5% 0%
+
+  &__title-icon
+    float: left
+    +size(50% 128px)
+    margin: 0 0 11%
+    padding: 0
+    font: 400 14px $second-font
+    letter-spacing: 2px
+    text-align: center
+    text-transform: lowercase
+    color: $black-two
+
+    &:last-of-type,
+    &:nth-of-type(5)
+      margin-bottom: 0
+
+    &:before
+      content: ''
+      display: block
+      margin: 0 auto
+      +size(81px 102px)
+      background-position: center top
+      background-repeat: no-repeat
+
+    &--design-icon
+      &:before
+        background-image: url('../img/design-ico.svg')
+
+    &--night-icon
+      &:before
+        background-image: url('../img/office-lamp-ico.svg')
+
+    &--communication-icon
+      &:before
+        background-image: url('../img/sent-ico.svg')
+
+    &--safety-icon
+      &:before
+        background-image: url('../img/key-icon.svg')
+
+    &--coordination-icon
+      &:before
+        background-image: url('../img/compas-ico.svg')
+
+    &--development-icon
+      &:before
+        background-image: url('../img/engineering-ico.svg')
+
+.skills
+  &__h3-title
+    margin: 0 0 34px
+    font: 400 14px $second-font
+    color: $black-two
+
+.progress-bar
+  width: 100%
+  +size(100% 34px)
+  margin-bottom: 52px
+  +bgc($gray)
+
+  >div
+    height: 34px
+    padding-right: 16px
+    +bgc($black)
+    color: $white
+    font: 14px/34px $second-font
+    text-align: right
+    transition: width .6s ease-in-out
+
+  &:last-of-type
+    margin-bottom: 0
+
+.project-description
+  padding-bottom: 67px
+  background-image: none
+  
+  &__left-block,
+  &__right-block
+    float: left
+    width: 38.5%
+    padding: 78px 20px
+
+  &__center-block
+    float: left
+    width: 23%
+    text-align: center
+
+  &__left-item
+    text-align: left
+    margin-bottom: 49px
+
+    &:before
+      content: ''
+      display: block
+      float: left
+      +size(65px)
+      background-repeat: no-repeat
+
+    &--photos
+      &:before
+        background-image: url('../img/photos-ico.svg')
+
+    &--responsiv
+      &:before
+        background-image: url('../img/responsiv-ico.svg')
+
+    .project-description__title,
+    .project-description__text
+      margin-left: 90px
+
+  &__right-item
+    text-align: right
+    margin-bottom: 49px
+
+    &:before
+      content: ''
+      display: block
+      float: right
+      +size(65px)
+      background-repeat: no-repeat
+
+    &--retina
+      &:before
+        background-image: url('../img/retina-ico.svg')
+
+    &--coffe
+      &:before
+        background-image: url('../img/coffe-ico.svg')
+
+    .project-description__title,
+    .project-description__text
+      margin-right: 90px
+
+  &__title
+    font: 400 14px $second-font
+    color: $black-two
+    letter-spacing: 2px
+    text-transform: lowercase
+
+  &__text
+    font: 15px/23px $general-font
+    letter-spacing: 2px
+    color: $gray-two
+
+.news-block
+  float: left
+  width: 32%
+  animation-duration: $animation-duration
+
+  &:not(:last-child)
+    margin-right: 1.9%
+
+  &__image
+    display: block
+    +size(100% 267px)
+    margin-bottom: 20px
+
+  &__info
+    float: left
+    font-size: 13px
+    color: $gray-two
+
+    &:before
+      content: ''
+      display: block
+      float: left
+      margin-right: 9px
+      background-repeat: no-repeat
+
+  &__info--author
+    margin-right: 58px
+
+    &:before
+      +size(15px 13px)
+      background-image: url('../img/author-ico.svg')
+
+  &__info--date
+    &:before
+      +size(13px)
+      background-image: url('../img/date-ico.svg')
+
+  &__title
+    display: block
+    font: 400 14px $second-font
+    color: $black-two
+
+  &__preview-text
+    float: left
+    line-height: 23px
+    letter-spacing: 2px
+    color: $gray-two
+
+  &__more-link
+    display: block
+    float: left
+    margin-top: 30px
+    font: 13px $second-font
+    color: $gray-three
+    transition: width .6s ease-in-out
+
+    &:after
+      content: ""
+      display: block
+      width: 0%
+      margin: 5px auto 0
+      text-align: center
+      border-bottom: 2px solid $content-elements-bg
+      transition: width .3s ease-in-out
+
+    &:hover,
+    &:active,
+    &:focus
+      color: $gray-three
+      &:after
+        width: 70%
+
+//Slider
+
+.quotes-slide
+  padding: 80px 0 98px
+  font-weight: 700
+  font-size: 21px
+  line-height: 35px
+  letter-spacing: 2px
+  text-align: center
+  color: $black-two
+  background: url(../img/quote-ico.svg) center top no-repeat
+
+  &::selection
+    +bgc(transparent)
+
+.owl-carousel
+  z-index: 1
+
+.owl-carousel 
+  .owl-wrapper-outer
+    position: relative
+    z-index: 2
+
+.owl-theme 
+  .owl-controls
+    position: relative
+    z-index: 3
+    margin-top: -43px
+
+    .owl-page
+      &:not(:last-child)
+        margin-right: 20px
+      span
+        +size(8px)
+        border-radius: 0
+        +bgc($black)
+
+.quotes
+  padding: 0
+
+  &__mobile-title
+    display: none
+    margin-bottom: 80px
+    padding-top: 37px
+    font-size: 34px
+
+  &__left-block
+    display: flex
+    justify-content: center
+    align-items: center
+    float: left
+    width: 50%
+    padding: 10% 9%
+    background: url('../img/quotes-bg.png') center center / cover no-repeat
+
+  &__right-block
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50%
+    padding: 5% 8.4%
+    float: right
+    background: url('../img/quotes-img.png') center center / cover no-repeat
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      +size(100%)
+      +bgc(rgba($blue, 0.63))
+      transition: all .6s ease-in-out
+
+  &__title
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+    +size(100%)
+    margin: 0
+    padding: 166px 0px
+    font-size: 65px
+    +br-solid(3px,$white)
+    color: $white
+
+    &:before
+      content: ''
+      position: absolute
+      top: 5px
+      left: 5px
+      +size(101% 103.7%)
+      +br-solid(3px,$white)
+      transition: all $animation-duration ease-in-out
+
+    &:hover
+
+      &:before
+        top: 5px
+        left: 5px
+
+    &.animated
+      &:before
+        top: -11px
+        left: -11px
+
+.contact-form
+  margin-top: 71px
+  padding: 0 153px
+
+  &__input-field
+    height: 66px
+    float: left
+    margin-bottom: 34px
+    padding-left: 34px
+    font-size: 14px
+    font-family: $second-font
+    color: $black
+    +bgc($very-light-gray)
+    +placeholder
+      font-size: 14px
+      font-family: $second-font
+      color: $silver
+
+    &--half-width
+      width: 48%
+      margin-right: 2%
+
+      &:nth-child(2n+2)
+        width: 50%
+        margin-right: 0
+
+    &--full-width
+      width: 100%
+
+  &__message-field
+    display: block
+    clear: both
+    width: 100%
+    padding: 30px 34px
+    font-size: 14px
+    font-family: $second-font
+    +bgc($very-light-gray)
+    resize: none
+    +placeholder
+      font-size: 14px
+      font-family: $second-font
+      color: $silver
+
+  &__submit-btn
+    margin-top: 45px
+    font-family: $second-font
+    color: $silver
+    +bgc(transparent)
+    transition: width .3s ease-in-out
+
+    &:hover,
+    &:active,
+    &:focus
+      color: $black-two
+    
+    &:after
+      content: ""
+      display: block
+      width: 0%
+      margin: 5px auto 0
+      text-align: center
+      border-bottom: 2px solid $red
+      transition: width .2s ease-in-out
+
+    &:hover
+      &:after
+        width: 70%

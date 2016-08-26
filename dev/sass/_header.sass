@@ -1,0 +1,66 @@
+.main-header
+  height: 1010px
+  padding: 23px 26px
+  overflow: hidden
+  background: $content-elements-bg url("../img/hd_bg.jpg") center center / cover no-repeat
+
+.header-item
+  position: relative
+  transition: all .7s ease-in-out
+  cursor: pointer
+
+  >span
+    position: absolute
+    display: block
+
+  >div
+    position: absolute
+    +size(77px 111px)
+    transition: all .7s ease-in-out
+    
+    &:last-child
+      top: 8px
+      left: 8px
+
+    &:first-child
+      top: 0
+      left: 0
+
+  &:hover
+      
+    >div
+      transition: all 1s ease-in-out
+      
+      &:last-child
+        top: 0
+        left: 0
+
+      &:first-child
+        top: 8px
+        left: 8px
+  
+  &--logo
+    float: left
+
+    >span
+      top: 33px
+      left: 28px
+      +size(31px 55px)
+      background: url('../img/logo.png')
+    
+    > div
+        +br-solid(3px,$white)
+
+  &--menu
+    float: right
+    margin-right: 86px
+
+    >div
+      +bgc($white)
+
+    >span
+      top: 50px
+      left: 27px
+      z-index: 2
+      +size(30px 12px)
+      background: url('../img/burger-ico.svg')

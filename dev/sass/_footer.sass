@@ -1,0 +1,54 @@
+.main-footer
+  display: flex
+  align-items: center
+  height: 137px
+  +background-image(linear-gradient(to right, $gray 0%, $gray 8%, white 100%))
+
+  &__left-block
+    float: left
+
+  &__right-block
+    float: right
+
+  &__copyright
+    color: $gray-four
+
+  &__social-links
+    margin-bottom: 17px
+
+  &__social-link
+    display: inline-block
+    vertical-align: middle
+    background-repeat: no-repeat
+    transition: opacity .3s ease-in-out
+
+    &:hover
+      opacity: .6
+
+    &:not(:last-child)
+      margin-right: 17px
+    
+    &--tw
+      +size(17px 13px)
+      background-image: url('../img/twitter-ico.png')
+
+    &--fb
+      +size(9px 17px)
+      background-image: url('../img/facebook-ico.png')
+
+    &--bh
+      +size(17px 11px)
+      background-image: url('../img/behance-ico.png')
+
+.to-top-btn
+  position: relative
+  top: 0
+  +size(44px 39px)
+  background: $black-two url('../img/to-top-ico.svg') center center no-repeat
+  animation-name: pulse
+
+  &:hover
+    animation-name: pulse
+    animation-duration: .5s
+    animation-fill-mode: both
+    animation-iteration-count: infinite
